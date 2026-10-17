@@ -1,0 +1,10 @@
+# Written by Copier from samclement/swhurl-app-template-typescript; `copier update` reads it. Do not edit.
+_commit: v0.2.12-1-gc268ac5
+_src_path: https://github.com/samclement/swhurl-app-template-typescript.git
+api: none
+app_name: swhurl-try-19
+database: none
+description: Seed image timing test (throwaway)
+events: none
+flags: none
+kind: web

@@ -1,0 +1,22 @@
+name: Container
+
+# Checks and publishes this app with the workflow shared by every app from the swhurl template
+# (its app.yml). Renovate proposes version updates; PRs check the app before main publishes an image.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  packages: write
+
+jobs:
+  app:
+    uses: samclement/swhurl-app-template-typescript/.github/workflows/app.yml@v0.2.12
+    with:
+      checks-in-image: true
+      reuse-pr-image: true

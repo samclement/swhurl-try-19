@@ -1,0 +1,34 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "flags": "node scripts/flags.mjs",
+    "build": "node scripts/flags.mjs && tsc",
+    "dev": "node scripts/flags.mjs && tsx src/main.ts",
+    "start": "node dist/main.js",
+    "check": "node scripts/flags.mjs && tsc --noEmit",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "openapi": "node dist/openapi.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.4",
+    "@hono/zod-openapi": "^1.6.3",
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.81.0",
+    "@opentelemetry/instrumentation": "^0.223.0",
+    "ajv": "^8.20.0",
+    "hono": "^4.13.13",
+    "nats": "^2.29.3",
+    "pino": "^10.3.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "@asyncapi/specs": "^6.11.1",
+    "@types/node": "^25.8.0",
+    "tsx": "^4.22.1",
+    "typescript": "^7.0.0"
+  }
+}

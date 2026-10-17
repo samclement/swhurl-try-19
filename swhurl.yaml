@@ -1,0 +1,16 @@
+# This app's identity, what its image needs and what it offers, read by the swhurl platform.
+# Each field and its kind: https://github.com/samclement/swhurl-platform/blob/main/docs/apps.md#swhurlyaml
+
+# Identity: what the app is
+version: 1
+stack: typescript
+kind: web
+
+# Needs: what the image needs to run
+port: 8080
+healthPath: /healthz
+uid: 65532
+telemetry: otlp
+
+# Grants are set on the platform, not here: the team, who can reach the app, the apps it calls, the
+# events it receives and its alerts (the console's New app form and app page, or make app-*).

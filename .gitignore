@@ -1,0 +1,8 @@
+node_modules/
+dist/
+# Generated from swhurl.yaml by scripts/flags.mjs on every build
+src/flags.ts
+.env
+.DS_Store
+
+app.db*
