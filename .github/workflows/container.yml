@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   app:
-    uses: samclement/swhurl-app-template-typescript/.github/workflows/app.yml@v0.2.19
+    uses: samclement/swhurl-app-template-typescript/.github/workflows/app.yml@v0.2.21
     with:
       checks-in-image: true
       reuse-pr-image: true
