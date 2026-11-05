@@ -1,4 +1,4 @@
-FROM node:24-bookworm-slim AS deps
+FROM node:26-bookworm-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 ARG NPM_CONFIG_LOGLEVEL=warn
@@ -16,7 +16,7 @@ FROM build AS check
 COPY . .
 RUN npm test --if-present
 
-FROM node:24-bookworm-slim AS prod-deps
+FROM node:26-bookworm-slim AS prod-deps
 WORKDIR /app
 COPY package.json package-lock.json ./
 ARG NPM_CONFIG_LOGLEVEL=warn
